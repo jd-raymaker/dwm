@@ -1,5 +1,4 @@
 # JayDee's fork of dwm
----
 
 ## Original README from dwm
 ```
