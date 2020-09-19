@@ -1,6 +1,17 @@
 # JayDee's fork of dwm
 
-## Original README from dwm
+## Adding autostart
+Create a file at $HOME/.dwm/autostart.sh
+
+### Example
+```bash
+#!/bin/bash
+nitrogen --restore &
+picom &
+foobar &
+```
+
+### Original README from dwm
 ```
 dwm - dynamic window manager
 ============================
