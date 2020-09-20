@@ -108,9 +108,10 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = 0  } },
 	{ MODKEY,             	        XK_e,      spawn,          SHCMD(TERMINAL " -e ranger") },
 
-	{ 0, XF86XK_AudioMute,		spawn,		           SHCMD("amixer -D pulse sset Master toggle") },
-	{ 0, XF86XK_AudioRaiseVolume,	spawn,		           SHCMD("amixer -D pulse sset Master 5%+") },
-	{ 0, XF86XK_AudioLowerVolume,	spawn,		           SHCMD("amixer -D pulse sset Master 5%-") },
+	{ 0, XF86XK_AudioMute,                     spawn,          SHCMD("amixer -D pulse sset Master toggle") },
+	{ 0, XF86XK_AudioRaiseVolume,              spawn,          SHCMD("amixer -D pulse sset Master 5%+") },
+	{ 0, XF86XK_AudioLowerVolume,              spawn,          SHCMD("amixer -D pulse sset Master 5%-") },
+
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
@@ -120,7 +121,8 @@ static Key keys[] = {
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
-	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+
+	{ MODKEY|ShiftMask,             XK_Escape,      quit,      {0} },
 };
 
 /* button definitions */
