@@ -35,11 +35,11 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class      				instance    title       tags mask     isfloating   monitor */
-	{ "Steam",    				NULL,       NULL,       0,            1,           -1 },
-	{ "Lutris",   				NULL,       NULL,       0,            1,           -1 },
-	{ "UnityHub", 				NULL,       NULL,       0,            1,           -1 },
-	{ "steam_app_489830", 			NULL,       NULL,       0,            1,           -1 },
+	/* class      						instance    title       tags mask     isfloating   monitor */
+	{ "Steam",    						NULL,       NULL,       0,            1,           -1 },
+	{ "Lutris",   						NULL,       NULL,       0,            1,           -1 },
+	{ "UnityHub", 						NULL,       NULL,       0,            1,           -1 },
+	{ "steam_app_489830", 				NULL,       NULL,       0,            1,           -1 },
 	{ "Microsoft Teams Notification", 	NULL,       NULL,       0,            1,           -1 },
 };
 
