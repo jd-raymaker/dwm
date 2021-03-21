@@ -75,6 +75,7 @@ static const Layout layouts[] = {
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { TERMINAL, NULL };
+static const char *screenshot[] = { "screenshot.sh", NULL };
 
 /* Playerctl commands */
 #define playerctl(cmd) { .v = (const char*[]){ "playerctl", cmd, NULL } }
@@ -111,6 +112,7 @@ static Key keys[] = {
 	{ MODKEY,             	        XK_e,      spawn,          SHCMD(TERMINAL " -e ranger") },
 	{ MODKEY,             	        XK_c,      spawn,          SHCMD("rofi -show calc") },
 	{ MODKEY,             	        XK_space,  spawn,          SHCMD("rofi -show run") },
+	{ MODKEY,             	        XK_Print,  spawn,          {.v = screenshot } },
 	/* Audio control */
 	{ 0, XF86XK_AudioMute,                     spawn,          SHCMD("pulsemixer --toggle-mute") },
 	{ 0, XF86XK_AudioRaiseVolume,              spawn,          SHCMD("pulsemixer --change-volume +5") },
