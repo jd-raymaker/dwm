@@ -13,6 +13,7 @@ static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display 
 static const int showsystray        = 1;        /* 0 means no systray */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
+static const int focusonwheel 	    = 0;
 static const char *fonts[]          = { "hack:size=10" };
 static const char dmenufont[]       = "hack:size=10";
 static const char col_gray1[]       = "#1c1c1c";
@@ -35,14 +36,14 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class      						instance    title       tags mask     isfloating   monitor */
-	{ "Steam",    						NULL,       NULL,       0,            1,           -1 },
-	{ "Lutris",   						NULL,       NULL,       0,            1,           -1 },
-	{ "UnityHub", 						NULL,       NULL,       0,            1,           -1 },
-	{ "steam_app_489830", 				NULL,       NULL,       0,            1,           -1 },
+	/* class      				instance    title       tags mask     isfloating   monitor */
+	{ "Steam",    				NULL,       NULL,       0,            1,           -1 },
+	{ "Lutris",   				NULL,       NULL,       0,            1,           -1 },
+	{ "UnityHub", 				NULL,       NULL,       0,            1,           -1 },
+	{ "steam_app_489830", 			NULL,       NULL,       0,            1,           -1 },
 	{ "Microsoft Teams Notification", 	NULL,       NULL,       0,            1,           -1 },
 	{ "Microsoft Teams - Preview", 		NULL, 	    NULL,       0,            1,           -1 },
-	{ "VirtualBox Manager", 			NULL,       NULL,       0,            1,           -1 },
+	{ "VirtualBox Manager", 		NULL,       NULL,       0,            1,           -1 },
 };
 
 /* layout(s) */
@@ -106,8 +107,8 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,		XK_0,      					tag,            {.ui = ~0 } },
 	{ MODKEY,          		XK_h,      					focusmon,       {.i = -1 } },
 	{ MODKEY,          		XK_l,      					focusmon,       {.i = +1 } },
-	{ MODKEY|ShiftMask,		XK_comma,  					tagmon,         {.i = -1 } },
-	{ MODKEY|ShiftMask,		XK_period, 					tagmon,         {.i = +1 } },
+	{ MODKEY,			XK_comma,  					tagmon,         {.i = -1 } },
+	{ MODKEY,			XK_period, 					tagmon,         {.i = +1 } },
 	{ MODKEY|ShiftMask,		XK_n,      					shiftview,      {.i = +1 } },
 	{ MODKEY|ShiftMask,		XK_b,      					shiftview,      {.i = -1 } },
 	{ MODKEY,         		XK_e,      					spawn,          SHCMD(TERMINAL " -e ranger") },
@@ -115,14 +116,14 @@ static Key keys[] = {
 	{ MODKEY,         		XK_space,  					spawn,          SHCMD("rofi -show run") },
 	{ MODKEY,         		XK_Print,  					spawn,          {.v = screenshot } },
 	/* Audio control */
-	{ 0, 					XF86XK_AudioMute,       	spawn,          SHCMD("pulsemixer --toggle-mute") },
-	{ 0, 					XF86XK_AudioRaiseVolume,	spawn,          SHCMD("pulsemixer --change-volume +5") },
-	{ 0, 					XF86XK_AudioLowerVolume,	spawn,          SHCMD("pulsemixer --change-volume -5") },
+	{ 0, 				XF86XK_AudioMute,       			spawn,          SHCMD("pulsemixer --toggle-mute") },
+	{ 0, 				XF86XK_AudioRaiseVolume,			spawn,          SHCMD("pulsemixer --change-volume +5") },
+	{ 0, 				XF86XK_AudioLowerVolume,			spawn,          SHCMD("pulsemixer --change-volume -5") },
 	/* Player controls */
-	{ 0, 					XF86XK_AudioPlay,			spawn,          playerctl("play-pause") },
-	{ 0, 					XF86XK_AudioStop,			spawn,          playerctl("stop") },
-	{ 0, 					XF86XK_AudioNext,			spawn,          playerctl("next") },
-	{ 0, 					XF86XK_AudioPrev,			spawn,          playerctl("previous") },
+	{ 0, 				XF86XK_AudioPlay,				spawn,          playerctl("play-pause") },
+	{ 0, 				XF86XK_AudioStop,				spawn,          playerctl("stop") },
+	{ 0, 				XF86XK_AudioNext,				spawn,          playerctl("next") },
+	{ 0, 				XF86XK_AudioPrev,				spawn,          playerctl("previous") },
 
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
