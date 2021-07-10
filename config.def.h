@@ -46,7 +46,6 @@ static const Rule rules[] = {
 	{ "VirtualBox Manager", 		NULL,       NULL,       0,            1,           -1 },
 	{ "EDialog_popup", 			NULL,       NULL,       0,            1,           -1 },
 	{ "Wfica_ErrorOrInfo", 			NULL,       NULL,       0,            1,           -1 },
-	{ "discord", 				NULL,       NULL,       4,            0,           -1 },
 };
 
 /* layout(s) */
