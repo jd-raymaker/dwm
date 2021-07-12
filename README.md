@@ -1,9 +1,9 @@
 # JayDee's fork of dwm
 
 ## Adding autostart
-Create a file at $HOME/.dwm/autostart.sh
+Create a file at $HOME/.local/share/dwm/autostart.sh
 
-### Example
+### Autostart.sh example
 ```bash
 #!/bin/bash
 nitrogen --restore &
