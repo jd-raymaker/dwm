@@ -118,9 +118,9 @@ static Key keys[] = {
 	{ MODKEY,         		XK_space,  					spawn,          SHCMD("rofi -show run") },
 	{ MODKEY,         		XK_Print,  					spawn,          {.v = screenshot } },
 	/* Audio control */
-	{ 0, 				XF86XK_AudioMute,       			spawn,          SHCMD("pulsemixer --toggle-mute") },
-	{ 0, 				XF86XK_AudioRaiseVolume,			spawn,          SHCMD("pulsemixer --change-volume +5") },
-	{ 0, 				XF86XK_AudioLowerVolume,			spawn,          SHCMD("pulsemixer --change-volume -5") },
+	{ 0, 				XF86XK_AudioMute,       			spawn,          SHCMD("pulsemixer --toggle-mute && volume-indicator") },
+	{ 0, 				XF86XK_AudioRaiseVolume,			spawn,          SHCMD("pulsemixer --change-volume +5 && volume-indicator") },
+	{ 0, 				XF86XK_AudioLowerVolume,			spawn,          SHCMD("pulsemixer --change-volume -5 && volume-indicator") },
 	/* Player controls */
 	{ 0, 				XF86XK_AudioPlay,				spawn,          playerctl("play-pause") },
 	{ 0, 				XF86XK_AudioStop,				spawn,          playerctl("stop") },
