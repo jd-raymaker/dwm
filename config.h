@@ -88,7 +88,6 @@ static const char *screenshot[] = { "screenshot.sh", NULL };
 
 static Key keys[] = {
     /* modifier         key                 function        argument */
-    { MODKEY,           XK_p,               spawn,          {.v = dmenucmd } },
     { MODKEY,           XK_Return,          spawn,          {.v = termcmd } },
     { MODKEY,           XK_b,               togglebar,      {0} },
     { MODKEY,           XK_j,               focusstack,     {.i = +1 } },
@@ -114,7 +113,7 @@ static Key keys[] = {
     { MODKEY|ShiftMask, XK_b,               shiftview,      {.i = -1 } },
     { MODKEY,           XK_e,               spawn,          SHCMD(TERMINAL " -e ranger") },
     { MODKEY,           XK_c,               spawn,          SHCMD("rofi -show calc") },
-    { MODKEY,           XK_space,           spawn,          SHCMD("rofi -show run") },
+    { MODKEY,           XK_space,           spawn,          SHCMD("rofi -show drun") },
     { MODKEY,           XK_Print,           spawn,          {.v = screenshot } },
     { MODKEY|ShiftMask, XK_Escape,          spawn,          SHCMD("powermenu") },
     /* Audio control */
