@@ -112,8 +112,8 @@ static Key keys[] = {
     { MODKEY|ShiftMask, XK_n,               shiftview,      {.i = +1 } },
     { MODKEY|ShiftMask, XK_b,               shiftview,      {.i = -1 } },
     { MODKEY,           XK_e,               spawn,          SHCMD(TERMINAL " -e ranger") },
-    { MODKEY,           XK_c,               spawn,          SHCMD("rofi -show calc") },
-    { MODKEY,           XK_space,           spawn,          SHCMD("rofi -show drun") },
+    { MODKEY,           XK_c,               spawn,          SHCMD("rofi -show calc -show-icons") },
+    { MODKEY,           XK_space,           spawn,          SHCMD("rofi -show drun -show-icons") },
     { MODKEY,           XK_Print,           spawn,          {.v = screenshot } },
     { MODKEY|ShiftMask, XK_Escape,          spawn,          SHCMD("powermenu") },
     /* Audio control */
